@@ -53,6 +53,13 @@ const ctaH1 = document.querySelector('.cta h1');
 const ctabtn = document.querySelector('.cta button');
 const ctaImg = document.querySelector('.cta img');
 
+//Top Content
+
+const topContentH4 = document.querySelectorAll(
+  '.main-content .text-content h4'
+);
+const topContentP = document.querySelectorAll('.main-content .text-content p');
+
 nav[0].textContent = siteContent.nav['nav-item-1'];
 nav[1].textContent = siteContent.nav['nav-item-2'];
 nav[2].textContent = siteContent.nav['nav-item-3'];
@@ -65,6 +72,13 @@ nav[5].textContent = siteContent.nav['nav-item-6'];
 ctaH1.textContent = siteContent.cta.h1;
 ctabtn.textContent = siteContent.cta.button;
 ctaImg.src = siteContent.cta['img-src'];
+
+//Top Content
+topContentH4[0].textContent = siteContent['main-content']['features-h4'];
+topContentH4[1].textContent = siteContent['main-content']['about-h4'];
+
+topContentP[0].textContent = siteContent['main-content']['features-content'];
+topContentP[1].textContent = siteContent['main-content']['about-content'];
 
 // Example: Update the img src for the logo
 let logo = document.getElementById('logo-img');
