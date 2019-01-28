@@ -46,7 +46,8 @@ const siteContent = {
 let logo = document.getElementById('logo-img');
 
 //Nav
-const nav = document.querySelectorAll('nav a');
+const navLink = document.querySelectorAll('nav a');
+const navAdd = document.querySelector('nav');
 
 //Cta Section
 
@@ -84,12 +85,12 @@ const copyRight = document.querySelector('footer p');
 //Nav Section
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
-nav[0].textContent = siteContent.nav['nav-item-1'];
-nav[1].textContent = siteContent.nav['nav-item-2'];
-nav[2].textContent = siteContent.nav['nav-item-3'];
-nav[3].textContent = siteContent.nav['nav-item-4'];
-nav[4].textContent = siteContent.nav['nav-item-5'];
-nav[5].textContent = siteContent.nav['nav-item-6'];
+navLink[0].textContent = siteContent.nav['nav-item-1'];
+navLink[1].textContent = siteContent.nav['nav-item-2'];
+navLink[2].textContent = siteContent.nav['nav-item-3'];
+navLink[3].textContent = siteContent.nav['nav-item-4'];
+navLink[4].textContent = siteContent.nav['nav-item-5'];
+navLink[5].textContent = siteContent.nav['nav-item-6'];
 
 //Cta section
 
@@ -127,3 +128,17 @@ contactP[2].textContent = siteContent.contact['email'];
 //footer
 
 copyRight.textContent = siteContent.footer.copyright;
+
+//Stept 4
+//Change navagation Green
+
+navLink.forEach(a => (a.style.color = 'green'));
+
+const aTag = document.createElement('a');
+const aTag2 = document.createElement('a');
+
+aTag.textContent = 'NewLink Front';
+aTag2.textContent = 'NewLink Back';
+console.log(navAdd);
+navAdd.prepend(aTag);
+navAdd.appendChild(aTag2);
