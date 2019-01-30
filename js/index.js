@@ -11,7 +11,8 @@ const siteContent = {
   cta: {
     h1: 'DOM Is Awesome',
     button: 'Get Started',
-    'img-src': 'img/header-img.png'
+    'img-src': 'img/header-img.png',
+    'img-src2': 'https://media.giphy.com/media/pm4btnh4ZMvks/giphy.gif'
   },
   'main-content': {
     'features-h4': 'Features',
@@ -96,6 +97,7 @@ navLink[5].textContent = siteContent.nav['nav-item-6'];
 
 ctaH1.textContent = siteContent.cta.h1;
 ctabtn.textContent = siteContent.cta.button;
+
 ctaImg.src = siteContent.cta['img-src'];
 
 //Top Content
@@ -129,7 +131,7 @@ contactP[2].textContent = siteContent.contact['email'];
 
 copyRight.textContent = siteContent.footer.copyright;
 
-//Stept 4
+//Task 4
 //Change navagation Green
 
 navLink.forEach(a => (a.style.color = 'green'));
@@ -142,3 +144,17 @@ aTag2.textContent = 'NewLink Back';
 console.log(navAdd);
 navAdd.prepend(aTag);
 navAdd.appendChild(aTag2);
+
+// Stretch ///
+
+const colorChange = document.querySelectorAll('.main-content p');
+
+colorChange.forEach(p =>
+  p.addEventListener('click', () => {
+    p.style.color = 'purple';
+    p.style.fontSize = '28px';
+  })
+);
+ctabtn.addEventListener('click', () => {
+  ctaImg.src = siteContent.cta['img-src2'];
+});
